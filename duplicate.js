@@ -8,6 +8,7 @@ function duplicate(array) {
         }
         seen[array[i]] = true;
     }
+    return NaN;
 }
 
 console.log(duplicate(a));
