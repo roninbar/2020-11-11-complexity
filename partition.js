@@ -18,7 +18,7 @@ function partition(a) {
     return p;
 }
 
-const a = [-4, -2, 3, -11, 7, 5, -4, 1, 2, -3];
+const a = [1, -4, -2, 3, -11, 7, 5, -4, 1, 2, -3, -1, -1];
 
 const p = partition(a);
 
