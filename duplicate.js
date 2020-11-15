@@ -1,5 +1,5 @@
 function duplicate(array) {
-    const seen = [];
+    const seen = {};
     for (let i = 0; i < array.length; i++) {
         if (seen[array[i]]) {
             return array[i];
