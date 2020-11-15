@@ -2,18 +2,15 @@ function merge(a, b) {
     const c = [];
     let i = 0, j = 0;
     while (i < a.length || j < b.length) {
-        if (i === a.length) {
-            c.push(b[j++]);
-        }
-        else if (j === b.length) {
-            c.push(a[i++]);
-        }
-        else if (a[i] < b[j]) {
-            c.push(a[i++]);
-        }
-        else {
-            c.push(b[j++]);
-        }
+        c.push(
+            i === a.length
+                ? b[j++]
+                : j === b.length
+                    ? a[i++]
+                    : a[i] < b[j]
+                        ? a[i++]
+                        : b[j++]
+        );
     }
     return c;
 }
